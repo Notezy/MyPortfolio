@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="icon" href="images/master red guitar.jpg">
+
+<link rel="stylesheet" href="w3.css">
+<style>
+
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>MY<br>Portfolio</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-#1860c9">Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-#1860c9">Showcase</a> 
+    <a href="#About me" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-#1860c9">About me</a> 
+    <a href="#Favorite artist" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-#1860c9">Favorite artist</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-#1860c9">Contact</a>
+  </div>
+</nav>
+
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">&#1860c9;</a>
+  <span>Company Name</span>
+</header>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Artist</b></h1>
+    <h1 class="w3-xxxlarge w3-text-black"><b>Showcase.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+  </div>
+  
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="images/closeEye.jpg" style="width:100%" onclick="onClick(this)" alt="Is me">
+      <img src="images/arizen.png" style="width:100%" onclick="onClick(this)" alt="Bleach">
+      <img src="images/yuta.jpg" style="width:100%" onclick="onClick(this)" alt="Jujutsu kaisen">
+    </div>
+
+    <div class="w3-half">
+      <img src="images/goodguy.jpg" style="width:100%" onclick="onClick(this)" alt="My Work">
+      <img src="images/gohan.jpg" style="width:100%" onclick="onClick(this)" alt="Dragon ball one shot">
+      <img src="images/gyro.jpg" style="width:100%" onclick="onClick(this)" alt="Jojo bizarre adventure">
+    </div>
+  </div>
+
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <div class="w3-container" id="About me" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>About me.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+    <p>Hello my name is Pattarakorn you can call me note in the future i will an Artist.</p>
+    <p>Currently I am 18 years old. I am interested in drawing and composing one shot manga,
+         but at the moment my works are not very famous. 
+         I started drawing when I was 4 years old and started composing manga when I was 13 years old.
+        Ton is just a drawing by my favorite artist, just part of the collection.
+    </p>
+  </div>
+  
+  <div class="w3-container" id="Favorite artist" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Favorite artist.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/toriyama.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Toriyama Akira</h3>
+          <p>He was the author of Dragon Ball and Arale. Currently, he has passed away at the age of 68.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/gege.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Gege Akutami</h3>
+          <p>He is the author of jujutsu kaisen. I like his work and his unique lines.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/akira.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Akira Hirohiko</h3>
+          <p>He is the author of Jojo bizarre adventure. I like  a designing his characters and characters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+    <p>My contact methods:) </p>
+    <a href="https://www.instagram.com/note_art2/"target="_blank"><img src="images/ig.jpg" alt="icon"
+      style="width:42px;height:42px;"></a>
+    <p>Instagram: @Note_art2</p>
+    <a href="https://web.facebook.com/profile.php?id=100021952660602"target="_blank"><img src="images/facebook.jpg" alt="icon"
+      style="width:42px;height:42px;"></a>
+      <p>Facebook: Phattarakorn Dongyen</p>
+  </div>
+
+</div>
+
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
